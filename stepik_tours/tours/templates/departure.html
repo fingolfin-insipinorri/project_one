@@ -55,78 +55,22 @@
 
 
     <!-- CARDS -->
-
-      <div class="row mt-5" data-test="cards">
-
-        <div class="col-4" data-test="card">
-            <div class="card mb-3" >
-            <img src="https://place-hold.it/300x200" class="card-img-top img-fluid" data-test="picture">
-            <div class="card-body">
-              <h5 class="card-title">Hotel title</h5>
-             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="" class="btn btn-sm btn-primary" data-test="tourlink">Подробнее</a>
-            </div>
+ {% for tour in tours %}
+     {% if tour.id_tour.departure == "nsk" %}
+        <div class="row mt-5" data-test="cards">
+             <div class="col-4" data-test="card">
+                <div class="card mb-3" >
+                    <img src="{{ napravlenie.picture }}" class="card-img-top img-fluid" data-test="picture">
+                    <div class="card-body">
+                     <h5 class="card-title"> {{ napravlenie.title }} </h5>
+                    <p class="card-text">{{ napravlenie.description }}</p>
+                     <a href="" class="btn btn-sm btn-primary" data-test="tourlink"> </a>
+                    </div>
+                 </div>
+             </div>
         </div>
-        </div>
-
-        <div class="col-4" data-test="card">
-            <div class="card mb-3" >
-            <img src="https://place-hold.it/300x200" class="card-img-top img-fluid" data-test="picture">
-            <div class="card-body">
-              <h5 class="card-title">Hotel title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="" class="btn btn-sm btn-primary" data-test="tourlink">Подробнее</a>
-            </div>
-        </div>
-        </div>
-
-        <div class="col-4" data-test="card">
-            <div class="card mb-3" >
-            <img src="https://place-hold.it/300x200" class="card-img-top img-fluid" data-test="picture">
-            <div class="card-body">
-             <h5 class="card-title">Hotel title</h5>
-             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-             <a href="" class="btn btn-sm btn-primary" data-test="tourlink">Подробнее</a>
-            </div>
-        </div>
-        </div>
-
-        <div class="col-4" data-test="card">
-            <div class="card mb-3" >
-            <img src="https://place-hold.it/300x200" class="card-img-top img-fluid" data-test="picture">
-            <div class="card-body">
-              <h5 class="card-title">Hotel title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="" class="btn btn-sm btn-primary" data-test="tourlink">Подробнее</a>
-            </div>
-        </div>
-        </div>
-
-        <div class="col-4" data-test="card">
-            <div class="card mb-3" >
-            <img src="https://place-hold.it/300x200" class="card-img-top img-fluid" data-test="picture">
-            <div class="card-body">
-              <h5 class="card-title">Hotel title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="" class="btn btn-sm btn-primary" data-test="tourlink">Подробнее</a>
-            </div>
-        </div>
-        </div>
-
-        <div class="col-4" data-test="card">
-            <div class="card mb-3" >
-            <img src="https://place-hold.it/300x200" class="card-img-top img-fluid" data-test="picture">
-            <div class="card-body">
-              <h5 class="card-title">Hotel title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="" class="btn btn-sm btn-primary"  data-test="tourlink">Подробнее</a>
-            </div>
-        </div>
-        </div>
-    </div>    
-
-</div>
-
+{% endif %}
+{% endfor %}
 </body>
 </html>
   </body>
